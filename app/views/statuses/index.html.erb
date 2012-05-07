@@ -1,0 +1,23 @@
+<h1>Listando Status</h1>
+
+<table>
+  <tr>
+    <th>Descri&ccedil&atildeo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @statuses.each do |status| %>
+  <tr>
+    <td><%= status.descricao %></td>
+    <td><%= link_to 'Mostrar', status %></td>
+    <td><%= link_to 'Editar', edit_status_path(status) %></td>
+    <td><%= link_to 'Excluir', status, confirm: 'Tem certeza que deseja excluir o status?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Novo Status', new_status_path %>

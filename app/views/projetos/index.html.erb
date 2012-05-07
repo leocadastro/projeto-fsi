@@ -1,0 +1,41 @@
+<h1>Gerenciamento de Projetos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Descri&ccedil&atildeo</th>
+    <th>Tipo projeto</th>
+    <th>Valor do contrato</th>
+    <th>Status</th>
+    <th>Justificativa do status</th>
+    <th>In&iacutecio</th>
+    <th>T&eacutermino</th>
+    <th>Colaboradores</th>
+    <th>Anexos</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @projetos.each do |projeto| %>
+  <tr>
+    <td><%= projeto.nome %></td>
+    <td><%= projeto.descricao %></td>
+    <td><%= projeto.tipo_projeto %></td>
+    <td><%= projeto.valor_do_contrato %></td>
+    <td><%= projeto.status %></td>
+    <td><%= projeto.justificativa_do_status %></td>
+    <td><%= projeto.inicio %></td>
+    <td><%= projeto.termino %></td>
+    <td><%= projeto.colaboradores %></td>
+    <td><%= projeto.anexos %></td>
+    <td><%= link_to 'Mostrar', projeto %></td>
+    <td><%= link_to 'Editar', edit_projeto_path(projeto) %></td>
+    <td><%= link_to 'Excluir', projeto, confirm: 'Tem certeza que deseja excluir o projeto?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Novo Projeto', new_projeto_path %>

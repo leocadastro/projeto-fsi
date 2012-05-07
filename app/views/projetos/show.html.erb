@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @projeto.nome %>
+</p>
+
+<p>
+  <b>Descri&ccedil&atildeo:</b>
+  <%= @projeto.descricao %>
+</p>
+
+<p>
+  <b>Tipo do projeto:</b>
+  <%= @projeto.tipo_projeto %>
+</p>
+
+<p>
+  <b>Valor do contrato:</b>
+  <%= @projeto.valor_do_contrato %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @projeto.status %>
+</p>
+
+<p>
+  <b>Justificativa do status:</b>
+  <%= @projeto.justificativa_do_status %>
+</p>
+
+<p>
+  <b>In&iacutecio:</b>
+  <%= @projeto.inicio %>
+</p>
+
+<p>
+  <b>T&eacutermino:</b>
+  <%= @projeto.termino %>
+</p>
+
+<p>
+  <b>Colaboradores:</b>
+  <%= @projeto.colaboradores %>
+</p>
+
+<p>
+  <b>Anexos:</b>
+  <%= @projeto.anexos %>
+</p>
+
+
+<%= link_to 'Editar', edit_projeto_path(@projeto) %> |
+<%= link_to 'Voltar', projetos_path %>

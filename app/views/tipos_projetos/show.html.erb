@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @tipos_projeto.tipo %>
+</p>
+
+<p>
+  <b>Descri&ccedil&atildeo:</b>
+  <%= @tipos_projeto.descricao %>
+</p>
+
+
+<%= link_to 'Editar', edit_tipos_projeto_path(@tipos_projeto) %> |
+<%= link_to 'Voltar', tipos_projetos_path %>

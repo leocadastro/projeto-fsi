@@ -1,0 +1,25 @@
+<h1>Listando Tipos de Projetos</h1>
+
+<table>
+  <tr>
+    <th>Tipo</th>
+    <th>Descri&ccedil&atildeo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tipos_projetos.each do |tipos_projeto| %>
+  <tr>
+    <td><%= tipos_projeto.tipo %></td>
+    <td><%= tipos_projeto.descricao %></td>
+    <td><%= link_to 'Show', tipos_projeto %></td>
+    <td><%= link_to 'Edit', edit_tipos_projeto_path(tipos_projeto) %></td>
+    <td><%= link_to 'Destroy', tipos_projeto, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Novo Tipo de Projeto', new_tipos_projeto_path %>

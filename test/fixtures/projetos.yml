@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nome: MyString
+  descricao: MyString
+  tipo_projeto: MyString
+  valor_do_contrato: 
+  status: MyString
+  justificativa_do_status: MyString
+  inicio: 2012-04-10
+  termino: 2012-04-10
+  colaboradores: MyString
+  anexos: MyString
+
+two:
+  nome: MyString
+  descricao: MyString
+  tipo_projeto: MyString
+  valor_do_contrato: 
+  status: MyString
+  justificativa_do_status: MyString
+  inicio: 2012-04-10
+  termino: 2012-04-10
+  colaboradores: MyString
+  anexos: MyString

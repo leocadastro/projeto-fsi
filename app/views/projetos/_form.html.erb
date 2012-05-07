@@ -1,0 +1,62 @@
+<%= form_for(@projeto) do |f| %>
+  <% if @projeto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@projeto.errors.count, "error") %> Proibe o projeto de ser salvo:</h2>
+
+      <ul>
+      <% @projeto.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+    <div class="field">
+    <%= f.label :responsavel %><br />
+    <%= f.text_field :responsavel %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao %><br />
+    <%= f.text_field :descricao %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_projeto %><br />
+    <%= f.text_field :tipo_projeto %>
+  </div>
+  <div class="field">
+    <%= f.label :valor_do_contrato %><br />
+    <%= f.text_field :valor_do_contrato %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+	<%= collection_select(:statuses, :city_id, Status.all, :id, :descricao) %>
+    
+  </div>
+  <div class="field">
+    <%= f.label :justificativa_do_status %><br />
+    <%= f.text_field :justificativa_do_status %>
+  </div>
+  <div class="field">
+    <%= f.label :inicio %><br />
+    <%= f.date_select :inicio %>
+  </div>
+  <div class="field">
+    <%= f.label :termino %><br />
+    <%= f.date_select :termino %>
+  </div>
+  <div class="field">
+    <%= f.label :colaboradores %><br />
+    <%= f.text_field :colaboradores %>
+  </div>
+  <div class="field">
+    <%= f.label :anexos %><br />
+    <%= f.text_field :anexos %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
