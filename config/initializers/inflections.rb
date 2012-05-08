@@ -13,10 +13,7 @@
 # ActiveSupport::Inflector.inflections do |inflect|
 #   inflect.acronym 'RESTful'
 # end
-<<<<<<< HEAD
 
 ActiveSupport::Inflector.inflections do |inflect|
 	inflect.irregular 'status', 'statuses'
 end
-=======
->>>>>>> 2a6f6be72c9cefc113aea5eb7e8e7965e63d96ac

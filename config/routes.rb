@@ -1,13 +1,10 @@
 GerenciadorProjetos::Application.routes.draw do
-<<<<<<< HEAD
   resources :projetos
 
   resources :tipos_projetos
 
   resources :statuses
 
-=======
->>>>>>> 2a6f6be72c9cefc113aea5eb7e8e7965e63d96ac
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
