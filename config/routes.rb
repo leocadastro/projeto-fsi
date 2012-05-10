@@ -1,4 +1,4 @@
-GerenciadorProjetos::Application.routes.draw do
+	GerenciadorProjetos::Application.routes.draw do
   resources :projetos
 
   resources :tipos_projetos

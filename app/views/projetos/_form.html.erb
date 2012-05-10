@@ -24,8 +24,8 @@
     <%= f.text_field :descricao %>
   </div>
   <div class="field">
-    <%= f.label :tipo_projeto %><br />
-    <%= f.text_field :tipo_projeto %>
+    <%= f.label :tipos_projeto %><br />
+	<%= collection_select(:projetos, :tipos_projetos_id, TiposProjeto.all, :id, :descricao) %>
   </div>
   <div class="field">
     <%= f.label :valor_do_contrato %><br />
