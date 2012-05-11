@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :tipos_projeto %><br />
-	<%= collection_select(:projetos, :tipos_projetos_id, TiposProjeto.all, :id, :descricao) %>
+	<%= collection_select(:projeto, :tipo_projeto, TiposProjeto.all, :id, :tipo, :prompt => true) %>
   </div>
   <div class="field">
     <%= f.label :valor_do_contrato %><br />
@@ -33,7 +33,9 @@
   </div>
   <div class="field">
     <%= f.label :status %><br />
-	<%= collection_select(:statuses, :city_id, Status.all, :id, :descricao) %>
+	<%= collection_select(:projeto, :status, Status.all, :id, :descricao, :prompt => true) %>	
+	
+	
     
   </div>
   <div class="field">

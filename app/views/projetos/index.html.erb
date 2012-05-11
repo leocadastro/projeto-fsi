@@ -19,11 +19,12 @@
 
 <% @projetos.each do |projeto| %>
   <tr>
+
     <td><%= projeto.nome %></td>
     <td><%= projeto.descricao %></td>
-    <td><%= projeto.tipo_projeto %></td>
+    <td><%= TiposProjeto.find(projeto.tipo_projeto).tipo %></td>
     <td><%= projeto.valor_do_contrato %></td>
-    <td><%= projeto.status %></td>
+    <td><%= Status.find(projeto.status).descricao%></td>
     <td><%= projeto.justificativa_do_status %></td>
     <td><%= projeto.inicio %></td>
     <td><%= projeto.termino %></td>

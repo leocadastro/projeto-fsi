@@ -3,6 +3,7 @@ class ProjetosController < ApplicationController
   # GET /projetos.json
   def index
     @projetos = Projeto.all
+#@projetos.status = Status.find(@projetos.status)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,12 +15,14 @@ class ProjetosController < ApplicationController
   # GET /projetos/1.json
   def show
     @projeto = Projeto.find(params[:id])
+    @projeto.status = Status.find(@projeto.status)
+    @projeto.tipo_projeto = TiposProjeto.find(@projeto.tipo_projeto)
 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @projeto }
     end
-  end
+  end	
 
   # GET /projetos/new
   # GET /projetos/new.json
